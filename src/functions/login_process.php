@@ -16,6 +16,7 @@ if($_GET) {
     if ($usuario && password_verify($senha, $usuario['senha'])) {
         $_SESSION['usuario_id'] = $usuario['id_user'];
         $_SESSION['usuario_nome'] = $usuario['nome'];
+
         header('Location: ../views/hub.php?sucesso=1');
         exit();
     }  else {
